@@ -4,7 +4,7 @@ import getBoxShadow from 'dead-simple-box-shadow'
 import logo from '../../assets/logo.gif'
 
 const AppHeader = styled.div`
-  width: 100%;
+  display: inline-block;
   background: #d3cce3;
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@ const AppLogo = styled.img`
   border-radius: 25px;
 `
 
-export const AppTitle = styled.div`
+const AppTitle = styled.div`
   color: white;
   font-size: 1.75rem;
   font-weight: bold;

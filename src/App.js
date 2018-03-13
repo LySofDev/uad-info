@@ -12,10 +12,20 @@ injectGlobal`
     margin: 0;
     padding: 0;
   }
+  html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 `
 
 const AppStyles = styled.div`
-
+  margin: 0;
+  padding: 0;
 `
 
 export default () => (
