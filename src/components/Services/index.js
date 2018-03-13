@@ -28,12 +28,14 @@ const Service = styled.li`
 
 const Services = ({ data }) => {
   if (!data.services) return null
-  const { items, title } = data.services
-  const services = items.map(item => <Service>{item}</Service>)
   return (
     <ServicesContainer>
-      <Title>{title}</Title>
-      <ServicesList>{services}</ServicesList>
+      <Title>{data.services.title}</Title>
+      <ServicesList>
+        {data.services.items.map((item, index) => (
+          <Service key={`service-${index}`}>{item}</Service>
+        ))}
+      </ServicesList>
     </ServicesContainer>
   )
 }
