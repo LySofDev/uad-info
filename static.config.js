@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default {
-  getSiteProps: () => ({
-    title: 'Unidad Antidiscrimen',
-  }),
   getRoutes: async () => {
     return [
       {
