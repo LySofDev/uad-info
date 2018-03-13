@@ -26,18 +26,16 @@ const Service = styled.li`
   margin: 0.5rem 0;
 `
 
-const Services = ({ data }) => {
-  if (!data.services) return null
-  return (
-    <ServicesContainer>
-      <Title>{data.services.title}</Title>
-      <ServicesList>
-        {data.services.items.map((item, index) => (
-          <Service key={`service-${index}`}>{item}</Service>
-        ))}
-      </ServicesList>
-    </ServicesContainer>
-  )
-}
+const Services = ({ data }) => data.services ? (
+  <ServicesContainer>
+    <Title>{data.services.title}</Title>
+    <ServicesList>
+      {data.services.items.map((item, index) => (
+        <Service key={`service-${index}`}>{item}</Service>
+      ))}
+    </ServicesList>
+  </ServicesContainer>
+) : null
+
 
 export default withData(Services)
