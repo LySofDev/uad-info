@@ -1,7 +1,6 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
+import { Router } from 'react-static'
 import styled, { injectGlobal } from 'styled-components'
-//
 import Routes from 'react-static-routes'
 
 injectGlobal`
@@ -16,38 +15,13 @@ injectGlobal`
 `
 
 const AppStyles = styled.div`
-  a {
-    text-decoration: none;
-    color: #108db8;
-    font-weight: bold;
-  }
 
-  nav {
-    width: 100%;
-    background: #108db8;
-
-    a {
-      color: white;
-      padding: 1rem;
-      display: inline-block;
-    }
-  }
-
-  .content {
-    padding: 1rem;
-  }
-
-  img {
-    max-width: 100%;
-  }
 `
 
 export default () => (
   <Router>
     <AppStyles>
-      <div className="content">
-        <Routes />
-      </div>
+      <Routes />
     </AppStyles>
   </Router>
 )
