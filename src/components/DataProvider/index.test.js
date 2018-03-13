@@ -26,7 +26,7 @@ describe("DataProvider", () => {
     }
     const divs = dataProvider().find('div.test-child')
     expect(divs.length).toBeGreaterThan(0)
-    expect(divs.first().prop('data')).toEqual({})
+    expect(Object.keys(divs.first().props('data')).length).toBeGreaterThan(0)
   })
 
 })

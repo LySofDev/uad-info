@@ -1,16 +1,4 @@
 import React from 'react'
+import json from '../../assets/data.json'
 
-class DataProvider extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      data: {}
-    }
-  }
-
-  render() {
-    return this.props.render({ data: this.state.data })
-  }
-}
-
-export default DataProvider
+export default ({ render }) => render({ data: json.data })
