@@ -25,8 +25,10 @@ const Item = styled.li`
   margin: 0.5rem 0;
 `
 
+export const randomHash = () =>  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+
 export default ({ title, items }) => {
-  const listHash = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+  const listHash = randomHash()
 
   return (
     <ListContainer>
