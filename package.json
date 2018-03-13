@@ -8,7 +8,8 @@
     "build": "react-static build",
     "serve": "serve dist -p 3000",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "surge dist uad.surge.sh"
   },
   "dependencies": {
     "axios": "^0.16.2",
